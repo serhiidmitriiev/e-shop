@@ -1,0 +1,10 @@
+.container_img {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img_secondary {
+  width: 79px;
+  height: 80px;
+}

@@ -1,0 +1,26 @@
+.img {
+  width: 300px;
+  height: 300px;
+}
+.img:hover {
+  width: 310px;
+  height: 310px;
+}
+
+.card {
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 18px;
+  color: #1d1f22;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 18px;
+  color: #1d1f22;
+}

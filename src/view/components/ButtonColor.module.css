@@ -1,0 +1,14 @@
+.color_btn_container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.color_btn:hover {
+  background: white;
+}
+.color_btn_active {
+  width: 32px;
+  height: 32px;
+  border: 2px solid blue;
+}

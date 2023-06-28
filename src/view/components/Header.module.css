@@ -1,0 +1,26 @@
+.header {
+  height: 80px;
+  background: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.link {
+  color: #1d1f22;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: green;
+  font-size: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+}
