@@ -18,6 +18,7 @@ const userSlice = createSlice({
         title: action.payload.title,
         size: action.payload.size,
         color: action.payload.color,
+        amount: action.payload.amount,
       });
     },
   },

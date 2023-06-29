@@ -1,0 +1,16 @@
+.btn_container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn {
+  width: 10px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.count {
+  margin: 0 10px;
+}

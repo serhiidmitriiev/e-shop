@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import ImageMain from "../components/ImageMain";
 import ImagesSecondary from "../components/ImagesSecondary";
 import ButtonBack from "../components/ButtonBack";
+import ButtonCounter from "../components/ButtonCounter";
 import ButtonSize from "../components/ButtonSize";
 import ButtonColor from "../components/ButtonColor";
 import ButtonSubmit from "../components/ButtonSubmit";
@@ -20,6 +21,7 @@ const Product = () => {
   const [product, setProduct] = useState<Products>();
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
+  const [amount, setAmount] = useState(0);
 
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -37,6 +39,10 @@ const Product = () => {
     setColor(item);
   };
 
+  const handleButtonQuantity = (item: number) => {
+    setAmount(item);
+  };
+
   const handleSubmit = () => {
     dispatch({
       type: "userproducts/addUserProduct",
@@ -50,6 +56,7 @@ const Product = () => {
         title: product?.title,
         color,
         size,
+        amount,
       },
     });
   };
@@ -72,6 +79,11 @@ const Product = () => {
             <ButtonColor handleButtonColor={handleButtonColor} />
             <Text content={CHARACTERISTICS.price} />
             <Typography align="left">{`$${product.price}`}</Typography>
+            <Text content={CHARACTERISTICS.quantity} />
+            <ButtonCounter
+              handleButtonQuantity={handleButtonQuantity}
+              amount={amount}
+            />
             <ButtonSubmit onClick={handleSubmit} />
             <Text content={product.description} />
           </Box>

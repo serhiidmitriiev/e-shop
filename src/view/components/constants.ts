@@ -8,10 +8,12 @@ export const CHARACTERISTICS: {
   size: string;
   color: string;
   price: string;
+  quantity: string;
 } = {
   size: "SIZE",
   color: "COLOR",
   price: "PRICE",
+  quantity: "QUANTITY",
 };
 
 export let BUTTONTEXT: string;
@@ -51,6 +53,7 @@ export interface Products {
 export interface UserProducts extends Products {
   size: string;
   color: string;
+  amount: number;
 }
 
 export interface ProductsObject {
@@ -63,6 +66,17 @@ export type CardProps = Omit<Products, "category" | "description" | "rating">;
 
 export interface ButtonSizeProps {
   size: string;
+}
+
+export interface ButtonSizeFnProps {
+  handleButtonSize: Function;
+}
+export interface ButtonColorProps {
+  handleButtonColor: Function;
+}
+export interface ButtonQuantityProps {
+  handleButtonQuantity: Function;
+  amount: number;
 }
 
 export interface TextProps {
