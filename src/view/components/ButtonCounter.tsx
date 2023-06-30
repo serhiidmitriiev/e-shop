@@ -1,6 +1,6 @@
 import { Button, Box, Typography } from "@mui/material";
 import { ButtonQuantityProps } from "./constants";
-import styles from "./Counter.module.css";
+import styles from "./ButtonCounter.module.css";
 
 const ButtonCounter = ({
   handleButtonQuantity,

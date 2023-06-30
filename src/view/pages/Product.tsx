@@ -11,7 +11,11 @@ import ButtonSize from "../components/ButtonSize";
 import ButtonColor from "../components/ButtonColor";
 import ButtonSubmit from "../components/ButtonSubmit";
 import Text from "../components/Text";
-import { CHARACTERISTICS, BUTTONBACK } from "../components/constants";
+import {
+  CHARACTERISTICS,
+  BUTTONBACK,
+  BUTTONTEXT,
+} from "../components/constants";
 import { useAppDispatch, useAppSelector } from "../../utils/hooks";
 import { selectUserProduct } from "../../store/selectors/userProductSelector";
 import styles from "./Product.module.css";
@@ -29,7 +33,6 @@ const Product = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [category, productId]);
-  // const data = useAppSelector(selectUserProduct);
 
   const handleButtonSize = (item: string) => {
     setSize(item);
@@ -84,7 +87,7 @@ const Product = () => {
               handleButtonQuantity={handleButtonQuantity}
               amount={amount}
             />
-            <ButtonSubmit onClick={handleSubmit} />
+            <ButtonSubmit onClick={handleSubmit} content={BUTTONTEXT.add} />
             <Text content={product.description} />
           </Box>
         </Box>

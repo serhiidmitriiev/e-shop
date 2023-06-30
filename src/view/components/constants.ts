@@ -10,14 +10,19 @@ export const CHARACTERISTICS: {
   price: string;
   quantity: string;
 } = {
-  size: "SIZE",
-  color: "COLOR",
-  price: "PRICE",
-  quantity: "QUANTITY",
+  size: "SIZE:",
+  color: "COLOR:",
+  price: "PRICE:",
+  quantity: "QUANTITY:",
 };
 
-export let BUTTONTEXT: string;
-BUTTONTEXT = "add to cart";
+export const BUTTONTEXT: {
+  add: string;
+  order: string;
+} = {
+  add: "add to cart",
+  order: "order",
+};
 
 export let BUTTONBACK: string;
 BUTTONBACK = "Back";
@@ -80,7 +85,15 @@ export interface ButtonQuantityProps {
 }
 
 export interface TextProps {
-  content: string;
+  content: string | number;
+  className?: string;
+}
+export interface CartItemProps {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  amount: number;
 }
 
 export interface ImagesProps {

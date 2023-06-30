@@ -5,26 +5,24 @@ import Women from "./view/pages/Women";
 import Men from "./view/pages/Men";
 import Kids from "./view/pages/Kids";
 import Product from "./view/pages/Product";
+import Cart from "./view/pages/Cart";
 
-// import { Provider } from "react-redux";
-// import store from "./store/store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <StyledEngineProvider injectFirst>
-        {/* <Provider store={store}> */}
         <BrowserRouter>
           <Routes>
             <Route path="*" element={<Main />} />
             <Route path="women" element={<Women />} />
             <Route path="men" element={<Men />} />
             <Route path="kids" element={<Kids />} />
+            <Route path="cart" element={<Cart />} />
             <Route path="/:category/:productId" element={<Product />} />
           </Routes>
         </BrowserRouter>
-        {/* </Provider> */}
       </StyledEngineProvider>
     </div>
   );
