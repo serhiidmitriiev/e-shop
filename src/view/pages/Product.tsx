@@ -16,8 +16,7 @@ import {
   BUTTONBACK,
   BUTTONTEXT,
 } from "../components/constants";
-import { useAppDispatch, useAppSelector } from "../../utils/hooks";
-import { selectUserProduct } from "../../store/selectors/userProductSelector";
+import { useAppDispatch } from "../../utils/hooks";
 import styles from "./Product.module.css";
 
 const Product = () => {
@@ -79,7 +78,7 @@ const Product = () => {
             <Text content={CHARACTERISTICS.size} />
             <ButtonSize handleButtonSize={handleButtonSize} />
             <Text content={CHARACTERISTICS.color} />
-            <ButtonColor handleButtonColor={handleButtonColor} />
+            <ButtonColor handleButtonColor={handleButtonColor} color={color} />
             <Text content={CHARACTERISTICS.price} />
             <Typography align="left">{`$${product.price}`}</Typography>
             <Text content={CHARACTERISTICS.quantity} />

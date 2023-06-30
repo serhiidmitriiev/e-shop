@@ -24,12 +24,13 @@ const Cart = () => {
             price={item.price}
             image={item.image}
             amount={item.amount}
+            color={item.color}
           />
         ))}
         {data.length >= 1 ? (
           <ButtonSubmit content={BUTTONTEXT.order} />
         ) : (
-          "Something went wrong"
+          "Your cart is empty"
         )}
       </Box>
     </Box>

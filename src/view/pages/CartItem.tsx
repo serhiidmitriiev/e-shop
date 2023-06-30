@@ -8,17 +8,25 @@ import { CHARACTERISTICS } from "../components/constants";
 import { CartItemProps } from "../components/constants";
 import styles from "./CartItem.module.css";
 
-const CartItem = ({ id, title, price, image, amount }: CartItemProps) => {
+const CartItem = ({
+  id,
+  title,
+  price,
+  image,
+  amount,
+  color,
+}: CartItemProps) => {
   const [size, setSize] = useState("");
-  const [color, setColor] = useState("");
+  const [pickedColor, setPickedColor] = useState(color);
   const [quantity, setQuantity] = useState(amount);
+  console.log(color);
 
   const handleButtonSize = (item: string) => {
     setSize(item);
   };
 
   const handleButtonColor = (item: string) => {
-    setColor(item);
+    setPickedColor(item);
   };
 
   const handleButtonQuantity = (item: number) => {
@@ -32,7 +40,10 @@ const CartItem = ({ id, title, price, image, amount }: CartItemProps) => {
         <Text content={CHARACTERISTICS.size} />
         <ButtonSize handleButtonSize={handleButtonSize} />
         <Text content={CHARACTERISTICS.color} />
-        <ButtonColor handleButtonColor={handleButtonColor} />
+        <ButtonColor
+          handleButtonColor={handleButtonColor}
+          color={pickedColor}
+        />
       </Box>
       <Box className={styles.image_container}>
         <ButtonCounter

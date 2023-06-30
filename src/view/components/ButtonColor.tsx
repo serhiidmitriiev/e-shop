@@ -4,17 +4,14 @@ import { COLORS } from "./constants";
 import { ButtonColorProps } from "./constants";
 import styles from "./ButtonColor.module.css";
 
-const ButtonColor = ({ handleButtonColor }: ButtonColorProps) => {
-  const [activeButton, setActiveButton] = useState("");
-
+const ButtonColor = ({ handleButtonColor, color }: ButtonColorProps) => {
   return (
     <Box className={styles.color_btn_container}>
       {COLORS.map((item) => (
         <Button
           variant="contained"
-          className={activeButton !== item.id ? "" : styles.color_btn_active}
+          className={color !== item.id ? "" : styles.color_btn_active}
           onClick={() => {
-            setActiveButton(item.id);
             handleButtonColor(item.id);
           }}
           sx={{

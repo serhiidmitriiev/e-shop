@@ -7,6 +7,7 @@ import icon from "../../assets/storeIcon.svg";
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const total = 2;
   return (
     <Box className={styles.header}>
       <Box className={styles.links}>
@@ -23,7 +24,7 @@ const Header = () => {
       <img src={icon} alt="storeIcon" />
       <IconButton>
         <Link to="/cart">
-          <Badge>
+          <Badge badgeContent={total} color="error">
             <AddShoppingCart />
           </Badge>
         </Link>

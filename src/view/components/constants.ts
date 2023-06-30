@@ -77,6 +77,7 @@ export interface ButtonSizeFnProps {
   handleButtonSize: Function;
 }
 export interface ButtonColorProps {
+  color?: string;
   handleButtonColor: Function;
 }
 export interface ButtonQuantityProps {
@@ -94,6 +95,7 @@ export interface CartItemProps {
   price: number;
   image: string;
   amount: number;
+  color?: string;
 }
 
 export interface ImagesProps {
