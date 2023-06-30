@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, Box } from "@mui/material";
 import { COLORS } from "./constants";
 import { ButtonColorProps } from "./constants";

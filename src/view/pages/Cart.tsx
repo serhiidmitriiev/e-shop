@@ -25,6 +25,7 @@ const Cart = () => {
             image={item.image}
             amount={item.amount}
             color={item.color}
+            size={item.size}
           />
         ))}
         {data.length >= 1 ? (

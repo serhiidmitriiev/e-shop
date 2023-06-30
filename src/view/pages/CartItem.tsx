@@ -15,14 +15,15 @@ const CartItem = ({
   image,
   amount,
   color,
+  size,
 }: CartItemProps) => {
-  const [size, setSize] = useState("");
+  const [pickedSize, setPickedSize] = useState(size);
   const [pickedColor, setPickedColor] = useState(color);
   const [quantity, setQuantity] = useState(amount);
-  console.log(color);
+  console.log(size);
 
   const handleButtonSize = (item: string) => {
-    setSize(item);
+    setPickedSize(item);
   };
 
   const handleButtonColor = (item: string) => {
@@ -38,7 +39,7 @@ const CartItem = ({
         <Typography>{title}</Typography>
         <Text content={price} />
         <Text content={CHARACTERISTICS.size} />
-        <ButtonSize handleButtonSize={handleButtonSize} />
+        <ButtonSize handleButtonSize={handleButtonSize} size={pickedSize} />
         <Text content={CHARACTERISTICS.color} />
         <ButtonColor
           handleButtonColor={handleButtonColor}

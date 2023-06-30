@@ -4,10 +4,14 @@ import { AddShoppingCart } from "@mui/icons-material";
 import { Badge, IconButton } from "@mui/material";
 import { LINKS } from "./constants";
 import icon from "../../assets/storeIcon.svg";
+import { useAppSelector } from "../../utils/hooks";
+import { selectUserProductAmount } from "../../store/selectors/userProductSelector";
 import styles from "./Header.module.css";
 
 const Header = () => {
-  const total = 2;
+  const selectedProduct = useAppSelector(selectUserProductAmount);
+  console.log("this is my user's product", selectedProduct);
+
   return (
     <Box className={styles.header}>
       <Box className={styles.links}>
@@ -24,7 +28,10 @@ const Header = () => {
       <img src={icon} alt="storeIcon" />
       <IconButton>
         <Link to="/cart">
-          <Badge badgeContent={total} color="error">
+          <Badge
+            badgeContent={selectedProduct.length === 0 ? "0" : selectedProduct}
+            color="error"
+          >
             <AddShoppingCart />
           </Badge>
         </Link>

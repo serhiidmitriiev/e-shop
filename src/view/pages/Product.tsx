@@ -76,7 +76,7 @@ const Product = () => {
               {product.title}
             </Typography>
             <Text content={CHARACTERISTICS.size} />
-            <ButtonSize handleButtonSize={handleButtonSize} />
+            <ButtonSize handleButtonSize={handleButtonSize} size={size} />
             <Text content={CHARACTERISTICS.color} />
             <ButtonColor handleButtonColor={handleButtonColor} color={color} />
             <Text content={CHARACTERISTICS.price} />
