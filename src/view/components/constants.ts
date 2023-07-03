@@ -103,3 +103,9 @@ export interface CartItemProps {
 export interface ImagesProps {
   src: string;
 }
+
+export interface PopupProps {
+  open: boolean;
+  selectedValue: string;
+  onClose: (value: string) => void;
+}

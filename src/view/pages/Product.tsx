@@ -10,6 +10,7 @@ import ButtonCounter from "../components/ButtonCounter";
 import ButtonSize from "../components/ButtonSize";
 import ButtonColor from "../components/ButtonColor";
 import ButtonSubmit from "../components/ButtonSubmit";
+import Popup from "../components/Popup";
 import Text from "../components/Text";
 import {
   CHARACTERISTICS,
@@ -25,6 +26,7 @@ const Product = () => {
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [amount, setAmount] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -33,6 +35,9 @@ const Product = () => {
       .then((data) => setProduct(data));
   }, [category, productId]);
 
+  const handleClose = (value: string) => {
+    setOpen(false);
+  };
   const handleButtonSize = (item: string) => {
     setSize(item);
   };
@@ -61,6 +66,10 @@ const Product = () => {
         amount,
       },
     });
+    setOpen(true);
+    setSize("");
+    setColor("");
+    setAmount(0);
   };
 
   return (
@@ -87,6 +96,7 @@ const Product = () => {
               amount={amount}
             />
             <ButtonSubmit onClick={handleSubmit} content={BUTTONTEXT.add} />
+            <Popup open={open} onClose={handleClose} selectedValue={size} />
             <Text content={product.description} />
           </Box>
         </Box>

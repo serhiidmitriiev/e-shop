@@ -20,7 +20,6 @@ const CartItem = ({
   const [pickedSize, setPickedSize] = useState(size);
   const [pickedColor, setPickedColor] = useState(color);
   const [quantity, setQuantity] = useState(amount);
-  console.log(size);
 
   const handleButtonSize = (item: string) => {
     setPickedSize(item);

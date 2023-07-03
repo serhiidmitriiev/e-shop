@@ -10,7 +10,6 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   const selectedProduct = useAppSelector(selectUserProductAmount);
-  console.log("this is my user's product", selectedProduct);
 
   return (
     <Box className={styles.header}>
