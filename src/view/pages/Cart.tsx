@@ -28,7 +28,6 @@ const Cart = () => {
   const handleSubmit = () => {
     setUserProducts(data);
     setOpen(true);
-    console.log("This is my submit button in the cart");
   };
 
   return (

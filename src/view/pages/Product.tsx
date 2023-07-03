@@ -27,6 +27,7 @@ const Product = () => {
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [amount, setAmount] = useState(0);
+  const [disabled, setDisabled] = useState(true);
   const [open, setOpen] = useState(false);
 
   const dispatch = useAppDispatch();
@@ -39,16 +40,27 @@ const Product = () => {
   const handleClose = (value: string) => {
     setOpen(false);
   };
+  const handleButton = () => {
+    if (size === "" || color === "" || amount === 0) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  };
+
   const handleButtonSize = (item: string) => {
     setSize(item);
+    handleButton();
   };
 
   const handleButtonColor = (item: string) => {
     setColor(item);
+    handleButton();
   };
 
   const handleButtonQuantity = (item: number) => {
     setAmount(item);
+    handleButton();
   };
 
   const handleSubmit = () => {
@@ -96,7 +108,11 @@ const Product = () => {
               handleButtonQuantity={handleButtonQuantity}
               amount={amount}
             />
-            <ButtonSubmit onClick={handleSubmit} content={BUTTONTEXT.add} />
+            <ButtonSubmit
+              onClick={handleSubmit}
+              content={BUTTONTEXT.add}
+              disabledButton={disabled}
+            />
             <Popup
               open={open}
               onClose={handleClose}
