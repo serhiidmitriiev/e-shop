@@ -16,6 +16,7 @@ import {
   CHARACTERISTICS,
   BUTTONBACK,
   BUTTONTEXT,
+  POPUP,
 } from "../components/constants";
 import { useAppDispatch } from "../../utils/hooks";
 import styles from "./Product.module.css";
@@ -96,7 +97,13 @@ const Product = () => {
               amount={amount}
             />
             <ButtonSubmit onClick={handleSubmit} content={BUTTONTEXT.add} />
-            <Popup open={open} onClose={handleClose} selectedValue={size} />
+            <Popup
+              open={open}
+              onClose={handleClose}
+              selectedValue={size}
+              message={POPUP[0].message}
+              link={POPUP[0].link}
+            />
             <Text content={product.description} />
           </Box>
         </Box>

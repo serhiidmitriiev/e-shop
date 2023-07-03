@@ -38,6 +38,14 @@ export let COLORS: Array<{
   { id: "gray", background: "#d3d2d5", width: "32px", height: "32px" }
 );
 
+export const POPUP: Array<{
+  message: string;
+  link: string;
+}> = Array(
+  { message: "Check your cart and proceed with your order", link: "/cart" },
+  { message: "Your order was successfully submited", link: "/" }
+);
+
 export const URL: string = "https://fakestoreapi.com/products";
 
 interface Rating {
@@ -108,4 +116,6 @@ export interface PopupProps {
   open: boolean;
   selectedValue: string;
   onClose: (value: string) => void;
+  message: string;
+  link: string;
 }
