@@ -1,4 +1,3 @@
-import "./App.css";
 import { StyledEngineProvider } from "@mui/material";
 import Main from "./view/pages/Main";
 import Women from "./view/pages/Women";

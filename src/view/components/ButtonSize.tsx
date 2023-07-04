@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { Button, Box } from "@mui/material";
 import { SIZES } from "./constants";
 import { ButtonSizeFnProps } from "./constants";
 import styles from "./ButtonSize.module.css";
 
 const ButtonSize = ({ handleButtonSize, size }: ButtonSizeFnProps) => {
-  // const [activeButton, setActiveButton] = useState("");
   return (
     <Box className={styles.size_btn}>
       {SIZES.map((item) => (
@@ -14,7 +12,6 @@ const ButtonSize = ({ handleButtonSize, size }: ButtonSizeFnProps) => {
           key={item}
           className={size !== item ? "" : styles.size_btn_active}
           onClick={() => {
-            // setActiveButton(item);
             handleButtonSize(item);
           }}
         >

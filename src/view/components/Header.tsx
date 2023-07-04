@@ -1,7 +1,6 @@
-import { Box } from "@mui/material";
+import { Box, Badge, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { AddShoppingCart } from "@mui/icons-material";
-import { Badge, IconButton } from "@mui/material";
 import { LINKS } from "./constants";
 import icon from "../../assets/storeIcon.svg";
 import { useAppSelector } from "../../utils/hooks";

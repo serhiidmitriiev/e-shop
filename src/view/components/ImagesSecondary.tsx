@@ -1,4 +1,3 @@
-import React from "react";
 import { Box } from "@mui/material";
 import { ImagesProps } from "./constants";
 import styles from "./ImagesSecondary.module.css";
