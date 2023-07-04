@@ -45,7 +45,7 @@ const productSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchProducts.pending, (state: any, action) => {
+      .addCase(fetchProducts.pending, (state: any) => {
         return {
           ...state,
           status: "loading",

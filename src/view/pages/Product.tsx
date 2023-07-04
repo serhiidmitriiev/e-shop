@@ -37,7 +37,7 @@ const Product = () => {
       .then((data) => setProduct(data));
   }, [category, productId]);
 
-  const handleClose = (value: string) => {
+  const handleClose = () => {
     setOpen(false);
   };
   const handleButton = () => {

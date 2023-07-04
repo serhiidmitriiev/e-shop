@@ -1,8 +1,6 @@
-export let LINKS: Array<string>;
-LINKS = ["HOME", "WOMEN", "MEN", "KIDS"];
+export const LINKS: Array<string> = ["HOME", "WOMEN", "MEN", "KIDS"];
 
-export let SIZES: Array<string>;
-SIZES = ["XS", "S", "M", "L"];
+export const SIZES: Array<string> = ["XS", "S", "M", "L"];
 
 export const CHARACTERISTICS: {
   size: string;
@@ -24,36 +22,35 @@ export const BUTTONTEXT: {
   order: "order",
 };
 
-export let BUTTONBACK: string;
-BUTTONBACK = "Back";
+export const BUTTONBACK = "Back";
 
-export let COLORS: Array<{
+export const COLORS: Array<{
   background: string;
   width: string;
   height: string;
   id: string;
-}> = Array(
+}> = [
   { id: "green", background: "#0f6450", width: "32px", height: "32px" },
   { id: "black", background: "#2b2b2b", width: "32px", height: "32px" },
-  { id: "gray", background: "#d3d2d5", width: "32px", height: "32px" }
-);
+  { id: "gray", background: "#d3d2d5", width: "32px", height: "32px" },
+];
 
 export const POPUP: Array<{
   message: string;
   link: string;
-}> = Array(
+}> = [
   { message: "Check your cart and proceed with your order", link: "/cart" },
-  { message: "Your order was successfully submited", link: "/" }
-);
+  { message: "Your order was successfully submited", link: "/" },
+];
 
-export const URL: string = "https://fakestoreapi.com/products";
+export const URL = "https://fakestoreapi.com/products";
 
-interface Rating {
+type Rating = {
   count: number;
   rate: number;
-}
+};
 
-export interface Products {
+export type Products = {
   category: string;
   description: string;
   id: number;
@@ -61,44 +58,44 @@ export interface Products {
   price: number;
   rating: Rating;
   title: string;
-}
+};
 
-export interface UserProducts extends Products {
+export type UserProducts = {
   size: string;
   color: string;
   amount: number;
-}
+} & Products;
 
-export interface ProductsObject {
+export type ProductsObject = {
   user: Products;
   products: Products[];
   status: string;
-}
+};
 
 export type CardProps = Omit<Products, "category" | "description" | "rating">;
 
-export interface ButtonSizeProps {
+export type ButtonSizeProps = {
   size: string;
-}
+};
 
-export interface ButtonSizeFnProps {
-  handleButtonSize: Function;
+export type ButtonSizeFnProps = {
+  handleButtonSize: (a: string) => void;
   size?: string;
-}
-export interface ButtonColorProps {
+};
+export type ButtonColorProps = {
   color?: string;
-  handleButtonColor: Function;
-}
-export interface ButtonQuantityProps {
-  handleButtonQuantity: Function;
+  handleButtonColor: (a: string) => void;
+};
+export type ButtonQuantityProps = {
+  handleButtonQuantity: (a: number) => void;
   amount: number;
-}
+};
 
-export interface TextProps {
+export type TextProps = {
   content: string | number;
   className?: string;
-}
-export interface CartItemProps {
+};
+export type CartItemProps = {
   id: number;
   title: string;
   price: number;
@@ -106,16 +103,16 @@ export interface CartItemProps {
   amount: number;
   color: string;
   size: string;
-}
+};
 
-export interface ImagesProps {
+export type ImagesProps = {
   src: string;
-}
+};
 
-export interface PopupProps {
+export type PopupProps = {
   open: boolean;
   selectedValue: string;
   onClose: (value: string) => void;
   message: string;
   link: string;
-}
+};
