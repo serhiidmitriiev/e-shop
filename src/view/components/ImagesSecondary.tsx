@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
-import { ImagesProps } from "./constants";
+
 import styles from "./ImagesSecondary.module.css";
+import { ImagesProps } from "./constants";
 
 const ImagesSecondary = ({ src }: ImagesProps) => {
   return (

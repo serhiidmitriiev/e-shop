@@ -1,24 +1,24 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import { Box } from "@mui/material";
-import Header from "../components/Header";
-import Card from "../components/Card";
-import { fetchProducts } from "../../store/thunks/fetchProducts";
+
 import {
   selectProducts,
   selectStatus,
 } from "../../store/selectors/productSelectors";
-import Spinner from "../components/Spinner";
-import { createUrl } from "../../utils/utils";
+import { fetchProducts } from "../../store/thunks/fetchProducts";
 import { useAppDispatch, useAppSelector } from "../../utils/hooks";
+import { createUrl } from "../../utils/utils";
+import Card from "../components/Card";
+import Header from "../components/Header";
+import Spinner from "../components/Spinner";
 import styles from "./Main.module.css";
 
 const Main = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
-
-    return () => {};
   }, []);
 
   const data = useAppSelector(selectProducts);

@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
-import { TextProps } from "./constants";
+
 import styles from "./Text.module.css";
+import { TextProps } from "./constants";
 
 const Text = ({ content }: TextProps) => {
   return (

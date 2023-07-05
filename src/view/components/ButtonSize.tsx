@@ -1,7 +1,8 @@
-import { Button, Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
+
+import styles from "./ButtonSize.module.css";
 import { SIZES } from "./constants";
 import { ButtonSizeFnProps } from "./constants";
-import styles from "./ButtonSize.module.css";
 
 const ButtonSize = ({ handleButtonSize, size }: ButtonSizeFnProps) => {
   return (

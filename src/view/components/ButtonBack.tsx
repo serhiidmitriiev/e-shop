@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
-import { TextProps } from "./constants";
+import { useNavigate } from "react-router-dom";
+
+import { Button } from "@mui/material";
+
 import styles from "./ButtonBack.module.css";
+import { TextProps } from "./constants";
 
 const ButtonBack = ({ content }: TextProps) => {
   let navigate = useNavigate();

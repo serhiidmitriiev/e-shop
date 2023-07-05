@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import { Box, Typography } from "@mui/material";
-import { Products } from "../components/constants";
+
+import { useAppDispatch } from "../../utils/hooks";
+import ButtonBack from "../components/ButtonBack";
+import ButtonColor from "../components/ButtonColor";
+import ButtonCounter from "../components/ButtonCounter";
+import ButtonSize from "../components/ButtonSize";
+import ButtonSubmit from "../components/ButtonSubmit";
 import Header from "../components/Header";
 import ImageMain from "../components/ImageMain";
 import ImagesSecondary from "../components/ImagesSecondary";
-import ButtonBack from "../components/ButtonBack";
-import ButtonCounter from "../components/ButtonCounter";
-import ButtonSize from "../components/ButtonSize";
-import ButtonColor from "../components/ButtonColor";
-import ButtonSubmit from "../components/ButtonSubmit";
 import Popup from "../components/Popup";
 import Text from "../components/Text";
+import { Products } from "../components/constants";
 import {
-  CHARACTERISTICS,
   BUTTONBACK,
   BUTTONTEXT,
+  CHARACTERISTICS,
   POPUP,
 } from "../components/constants";
-import { useAppDispatch } from "../../utils/hooks";
 import styles from "./Product.module.css";
 
 const Product = () => {

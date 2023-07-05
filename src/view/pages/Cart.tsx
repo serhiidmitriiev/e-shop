@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import { Box } from "@mui/material";
-import Header from "../components/Header";
-import { useAppSelector } from "../../utils/hooks";
+
 import { selectUserProduct } from "../../store/selectors/userProductSelector";
-import { BUTTONBACK, BUTTONTEXT } from "../components/constants";
+import { useAppSelector } from "../../utils/hooks";
 import ButtonBack from "../components/ButtonBack";
-import CartItem from "./CartItem";
 import ButtonSubmit from "../components/ButtonSubmit";
-import { UserProducts, POPUP } from "../components/constants";
+import Header from "../components/Header";
 import Popup from "../components/Popup";
+import { BUTTONBACK, BUTTONTEXT } from "../components/constants";
+import { POPUP, UserProducts } from "../components/constants";
 import styles from "./Cart.module.css";
+import CartItem from "./CartItem";
 
 const Cart = () => {
   const [userProducts, setUserProducts] = useState<UserProducts[]>();

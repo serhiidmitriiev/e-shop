@@ -1,12 +1,13 @@
-import { StyledEngineProvider } from "@mui/material";
-import Main from "./view/pages/Main";
-import Women from "./view/pages/Women";
-import Men from "./view/pages/Men";
-import Kids from "./view/pages/Kids";
-import Product from "./view/pages/Product";
-import Cart from "./view/pages/Cart";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { StyledEngineProvider } from "@mui/material";
+
+import Cart from "./view/pages/Cart";
+import Kids from "./view/pages/Kids";
+import Main from "./view/pages/Main";
+import Men from "./view/pages/Men";
+import Product from "./view/pages/Product";
+import Women from "./view/pages/Women";
 
 function App() {
   return (

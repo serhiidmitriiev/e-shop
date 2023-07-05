@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+
 import { Products } from "../../view/components/constants";
 import { ProductsObject } from "../../view/components/constants";
 import { fetchProducts } from "../thunks/fetchProducts";

@@ -1,7 +1,8 @@
-import { Button, Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
+
+import styles from "./ButtonColor.module.css";
 import { COLORS } from "./constants";
 import { ButtonColorProps } from "./constants";
-import styles from "./ButtonColor.module.css";
 
 const ButtonColor = ({ handleButtonColor, color }: ButtonColorProps) => {
   return (

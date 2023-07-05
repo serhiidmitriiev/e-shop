@@ -1,9 +1,11 @@
 import { useState } from "react";
+
 import { Box, Typography } from "@mui/material";
-import Text from "../components/Text";
-import ButtonSize from "../components/ButtonSize";
+
 import ButtonColor from "../components/ButtonColor";
 import ButtonCounter from "../components/ButtonCounter";
+import ButtonSize from "../components/ButtonSize";
+import Text from "../components/Text";
 import { CHARACTERISTICS } from "../components/constants";
 import { CartItemProps } from "../components/constants";
 import styles from "./CartItem.module.css";

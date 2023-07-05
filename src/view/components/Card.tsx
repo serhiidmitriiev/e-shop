@@ -1,8 +1,10 @@
 import React from "react";
+
 import { Box, Typography } from "@mui/material";
-import { CardProps } from "./constants";
+
 import { reduceTitle } from "../../utils/utils";
 import styles from "./Card.module.css";
+import { CardProps } from "./constants";
 
 const Card = ({ image, title, price }: CardProps) => {
   return (

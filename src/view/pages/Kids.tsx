@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
+
 import { Box } from "@mui/material";
+
 import { selectKidsProducts } from "../../store/selectors/productSelectors";
-import Header from "../components/Header";
 import Card from "../components/Card";
+import Header from "../components/Header";
 import styles from "./Main.module.css";
 
 const Kids = () => {

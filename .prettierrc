@@ -1,0 +1,7 @@
+{
+  "semi": true,
+  "trailingComma": "all",
+  "importOrder": ["^components/(.*)$", "^@mui/material", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

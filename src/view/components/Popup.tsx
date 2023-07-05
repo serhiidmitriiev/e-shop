@@ -1,10 +1,12 @@
-import { useLocation } from "react-router-dom";
-import { Dialog, DialogTitle, Badge, IconButton } from "@mui/material";
-import { Link } from "react-router-dom";
 import { AddShoppingCart } from "@mui/icons-material";
-import { useAppSelector } from "../../utils/hooks";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { Badge, Dialog, DialogTitle, IconButton } from "@mui/material";
+
 import { selectUserProductAmount } from "../../store/selectors/userProductSelector";
-import { PopupProps, POPUP } from "./constants";
+import { useAppSelector } from "../../utils/hooks";
+import { POPUP, PopupProps } from "./constants";
 
 const Popup = ({ onClose, selectedValue, open, message, link }: PopupProps) => {
   const selectedProduct = useAppSelector(selectUserProductAmount);

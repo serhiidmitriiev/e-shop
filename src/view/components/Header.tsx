@@ -1,11 +1,13 @@
-import { Box, Badge, IconButton } from "@mui/material";
-import { Link } from "react-router-dom";
 import { AddShoppingCart } from "@mui/icons-material";
-import { LINKS } from "./constants";
+import { Link } from "react-router-dom";
+
+import { Badge, Box, IconButton } from "@mui/material";
+
 import icon from "../../assets/storeIcon.svg";
-import { useAppSelector } from "../../utils/hooks";
 import { selectUserProductAmount } from "../../store/selectors/userProductSelector";
+import { useAppSelector } from "../../utils/hooks";
 import styles from "./Header.module.css";
+import { LINKS } from "./constants";
 
 const Header = () => {
   const selectedProduct = useAppSelector(selectUserProductAmount);
