@@ -7,7 +7,7 @@ import styles from "./ButtonBack.module.css";
 import { TextProps } from "./constants";
 
 const ButtonBack = ({ content }: TextProps) => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <Button
       variant="outlined"

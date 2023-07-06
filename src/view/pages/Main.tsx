@@ -13,6 +13,7 @@ import { createUrl } from "../../utils/utils";
 import Card from "../components/Card";
 import Header from "../components/Header";
 import Spinner from "../components/Spinner";
+import { Products } from "../components/constants";
 import styles from "./Main.module.css";
 
 const Main = () => {
@@ -29,8 +30,12 @@ const Main = () => {
       <Header />
       {status === "loading" && <Spinner />}
       <Box className={styles.container}>
-        {data?.map((item: any) => (
-          <Link to={`/${createUrl(item.category)}/${item.id}`} key={item.id}>
+        {data?.map((item: Products) => (
+          <Link
+            to={`/${createUrl(item.category)}/${item.id}`}
+            key={item.id}
+            className={styles.link}
+          >
             <Card
               key={item.id}
               id={item.id}

@@ -16,7 +16,7 @@ import CartItem from "./CartItem";
 const Cart = () => {
   const [userProducts, setUserProducts] = useState<UserProducts[]>();
   const [open, setOpen] = useState(false);
-  const [size, setSize] = useState("");
+  const size = "";
 
   useEffect(() => {
     localStorage.setItem("userProduct", JSON.stringify(userProducts));

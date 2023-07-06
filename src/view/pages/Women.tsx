@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import { selectWomenProducts } from "../../store/selectors/productSelectors";
 import Card from "../components/Card";
 import Header from "../components/Header";
+import { Products } from "../components/constants";
 import styles from "./Main.module.css";
 
 const Women = () => {
@@ -14,7 +15,7 @@ const Women = () => {
     <div>
       <Header />
       <Box className={styles.container}>
-        {products?.map((item: any) => (
+        {products?.map((item: Products) => (
           <Card
             key={item.id}
             id={item.id}

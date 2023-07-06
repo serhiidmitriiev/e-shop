@@ -91,6 +91,12 @@ export type ButtonQuantityProps = {
   amount: number;
 };
 
+export type ButtonSubmitProps = {
+  onClick: () => void;
+  content: string;
+  disabledButton?: boolean;
+};
+
 export type TextProps = {
   content: string | number;
   className?: string;

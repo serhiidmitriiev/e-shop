@@ -1,7 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-import { Products } from "../../view/components/constants";
-import { ProductsObject } from "../../view/components/constants";
+import { Products, ProductsObject } from "../../view/components/constants";
 import { fetchProducts } from "../thunks/fetchProducts";
 
 const initialState: ProductsObject = {
@@ -46,17 +45,17 @@ const productSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchProducts.pending, (state: any) => {
+      .addCase(fetchProducts.pending, (state: ProductsObject) => {
         return {
           ...state,
           status: "loading",
         };
       })
-      .addCase(fetchProducts.fulfilled, (state: any, action) => {
+      .addCase(fetchProducts.fulfilled, (state: ProductsObject, action) => {
         state.status = "succeeded";
         state.products = action.payload;
       })
-      .addCase(fetchProducts.rejected, (state: any, action) => {
+      .addCase(fetchProducts.rejected, (state: ProductsObject, action) => {
         return {
           ...state,
           status: "failed",
